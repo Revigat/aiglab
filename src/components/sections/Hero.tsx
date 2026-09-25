@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ControlCenter } from "@/components/mockups/ControlCenter";
 import { NetworkCanvas } from "@/components/ui/NetworkCanvas";
+import { LogoMark, Wordmark } from "@/components/layout/Logo";
 
 const method = ["Identificar", "Avaliar", "Controlar", "Monitorar", "Evidenciar", "Melhorar"];
 
@@ -20,11 +21,18 @@ export function Hero() {
 
       <Container>
         <div className="mx-auto max-w-4xl text-center">
-          <Reveal>
+          <Reveal className="flex flex-col items-center">
+            <LogoMark className="size-24 sm:size-28" priority />
+            <Wordmark className="mt-3 text-3xl sm:text-4xl" />
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-fg-subtle sm:text-[11px]">
+              Governança de Inteligência Artificial
+            </p>
+          </Reveal>
+          <Reveal delay={60} className="mt-8">
             <Eyebrow>AI Governance · Risk · Agentes</Eyebrow>
           </Reveal>
-          <Reveal delay={80}>
-            <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.06] tracking-tight text-fg sm:text-5xl lg:text-[4.1rem]">
+          <Reveal delay={120}>
+            <h1 className="mt-6 text-balance text-3xl font-semibold leading-[1.08] tracking-tight text-fg sm:text-4xl lg:text-[3.25rem]">
               Sua empresa usa IA.{" "}
               <span className="text-gradient">Mas consegue provar que ela está sob controle?</span>
             </h1>
